@@ -64,3 +64,4 @@
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/ref/DotNetInterview.API.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-s390x/native/libe_sqlite3.so
+/Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.sourcelink.json
