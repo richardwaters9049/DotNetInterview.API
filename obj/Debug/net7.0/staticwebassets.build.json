@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ZS/44xtYEzEPE/aV/D6+7DKneMa3z7LL42UWErOtVoM=",
+  "Source": "DotNetInterview.API",
+  "BasePath": "_content/DotNetInterview.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
