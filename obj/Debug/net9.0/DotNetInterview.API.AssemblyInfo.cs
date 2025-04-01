@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetInterview.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43ec7b8244fcbc9bf770e024b246b7f62367674d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetInterview.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetInterview.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
