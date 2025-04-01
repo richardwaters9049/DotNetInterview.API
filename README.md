@@ -1,13 +1,5 @@
 # Concerto Interview - Technical Task
 
-********************************
-
-## For Internal Use
-
-See internal use notes here: https://bellrockgroup.atlassian.net/wiki/spaces/Concerto/pages/113246209/Interview+Technical+Task
-
-********************************
-
 ## The Task
 
 Implement an API that can be used to manage the inventory of a small shop in London.
