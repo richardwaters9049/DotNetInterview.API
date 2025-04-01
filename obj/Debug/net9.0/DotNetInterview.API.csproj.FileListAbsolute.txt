@@ -6,6 +6,7 @@
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/DotNetInterview.API.runtimeconfig.json
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/DotNetInterview.API.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/DotNetInterview.API.pdb
+/Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/DotNetInterview.API.xml
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Microsoft.Data.Sqlite.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
@@ -20,12 +21,14 @@
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-arm/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-arm64/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-armel/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-mips64/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-arm/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so
+/Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-s390x/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-ppc64le/native/libe_sqlite3.so
 /Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-s390x/native/libe_sqlite3.so
@@ -46,6 +49,7 @@
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.csproj.CoreCompileInputs.cache
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.sourcelink.json
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/scopedcss/bundle/DotNetInterview.API.styles.css
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/staticwebassets.build.json
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/staticwebassets.development.json
@@ -59,9 +63,7 @@
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetIn.37F5EA57.Up2Date
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.dll
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/refint/DotNetInterview.API.dll
+/Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.xml
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.pdb
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.genruntimeconfig.cache
 /Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/ref/DotNetInterview.API.dll
-/Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a
-/Users/richy/Desktop/backend_task/DotNetInterview.API/bin/Debug/net9.0/runtimes/linux-musl-s390x/native/libe_sqlite3.so
-/Users/richy/Desktop/backend_task/DotNetInterview.API/obj/Debug/net9.0/DotNetInterview.API.sourcelink.json

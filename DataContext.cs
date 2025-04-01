@@ -3,20 +3,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DotNetInterview.API
 {
-    public sealed class DataContext : DbContext
+    public class DataContext : DbContext
     {
-        public DbSet<Item> Items { get; set; }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DataContext(DbContextOptions<DataContext> options)
-            : base(options)
-        {
-            Database.EnsureCreated();
-        }
-        
+        // Add these DbSets for your entities
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Variation> Variations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configure your entity relationships
+            modelBuilder.Entity<Item>()
+                .HasMany(i => i.Variations)
+                .WithOne(v => v.Item)
+                .HasForeignKey(v => v.ItemId);
+
+            // Seed initial data
             SeedData.Load(modelBuilder);
-            base.OnModelCreating(modelBuilder);
         }
     }
 }
