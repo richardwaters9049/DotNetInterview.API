@@ -7,19 +7,17 @@ namespace DotNetInterview.API
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        // Add these DbSets for your entities
-        public DbSet<Item> Items { get; set; }
-        public DbSet<Variation> Variations { get; set; }
+        public DbSet<Item> Items => Set<Item>();
+        public DbSet<Variation> Variations => Set<Variation>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure your entity relationships
             modelBuilder.Entity<Item>()
                 .HasMany(i => i.Variations)
-                .WithOne(v => v.Item)
-                .HasForeignKey(v => v.ItemId);
+                .WithOne()
+                .HasForeignKey(v => v.ItemId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            // Seed initial data
             SeedData.Load(modelBuilder);
         }
     }

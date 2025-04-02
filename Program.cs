@@ -1,78 +1,79 @@
 using DotNetInterview.API;
+using DotNetInterview.API.Controllers;
+using DotNetInterview.API.Services;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container ==============================================
+// Add services
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(ItemsController).Assembly)
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+    });
 
-// Controllers and API Explorer
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
-// Configure Swagger/OpenAPI documentation
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo 
     { 
-        Title = "DotNetInterview.API", 
-        Version = "1.0",
-        Description = "Interview Management API",
-        Contact = new OpenApiContact { Name = "Richy", Email = "richardwaters866@gmail.com" }
+        Title = "Shop Inventory API", 
+        Version = "v1",
+        Description = "API for managing shop inventory with dynamic pricing",
+        Contact = new OpenApiContact { Name = "API Support", Email = "support@shopapi.com" }
     });
     
-    // Include XML comments for enhanced documentation
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
 });
 
-// Configure Database ========================================================
-var connection = new SqliteConnection("Data Source=DotNetInterview;Mode=Memory;Cache=Shared");
-connection.Open();
+builder.Services.AddScoped<PricingService>();
 
+// SQLite Configuration
+var connection = new SqliteConnection("Data Source=ShopInventory;Mode=Memory;Cache=Shared");
+connection.Open();
 builder.Services.AddDbContext<DataContext>(options => 
     options.UseSqlite(connection)
-           .EnableSensitiveDataLogging() // Only for development
-           .EnableDetailedErrors());     // Only for development
+           .EnableSensitiveDataLogging()
+           .EnableDetailedErrors());
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline =======================================
-
+// Middleware pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => 
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DotNetInterview.API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop Inventory v1");
         c.RoutePrefix = "swagger";
-        c.DisplayRequestDuration(); // Show request timing in UI
+        c.ConfigObject.AdditionalItems["tryItOutEnabled"] = true;
     });
 }
 
 app.MapControllers();
 
-// Database Initialization ==================================================
+// Database initialization
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     try 
     {
         var context = services.GetRequiredService<DataContext>();
-        
-        // Ensure database is created and migrated
         context.Database.EnsureCreated();
-        
-        // Seed initial test data
         SeedData.Initialize(services);
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while initializing the database.");
+        logger.LogError(ex, "Database initialization failed");
     }
 }
 
